@@ -3,7 +3,6 @@ import { useState } from "react";
 import Web3 from "web3";
 import {
   addTokenToWallet,
-  checkWalletConnected,
   checkWalletInstalled,
   formatBalance,
   getNetworkName,
@@ -14,7 +13,6 @@ import {
 
 function Web3Component() {
   const isWalletInstalled = checkWalletInstalled();
-  const isWalletConnected = checkWalletConnected();
   const [instantProvider, setInstantProvider] = useState<Web3>();
   const [accounts, setAccounts] = useState<string[]>([]);
   const [balance, setBalance] = useState<bigint | number>();
