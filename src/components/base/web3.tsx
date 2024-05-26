@@ -60,7 +60,7 @@ function Web3Component() {
   const handleGetChainId = async () => {
     if (isWalletInstalled && instantProvider) {
       try {
-        // Read accounts
+        // Read chainId
         const result: bigint = await instantProvider.eth.getChainId();
         setChainId(result);
         return true;

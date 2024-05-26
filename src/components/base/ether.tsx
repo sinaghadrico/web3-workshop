@@ -60,7 +60,7 @@ function EtherComponent() {
   const handleGetChainId = async () => {
     if (isWalletInstalled && instantProvider) {
       try {
-        // Read accounts
+        // Read chainId
         const result: bigint = await instantProvider
           .getNetwork()
           .then((network) => network.chainId);
