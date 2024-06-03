@@ -207,6 +207,7 @@ function Web3Component() {
           .on("error", (error) => {
             console.error("Error:", error);
           });
+        console.log(data);
 
         return true;
       } catch (e) {

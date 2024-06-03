@@ -18,6 +18,7 @@ import {
   switchNetwork,
 } from "../utils/index";
 import { ethers } from "ethers";
+import { Token } from "../types";
 
 function EtherComponent() {
   const isWalletInstalled = checkWalletInstalled();
@@ -107,7 +108,6 @@ function EtherComponent() {
     if (isWalletInstalled && instantProvider) {
       try {
         const signer = await instantProvider.getSigner();
-        debugger;
         const tokenContract = new ethers.Contract(
           tokenList[0].address,
           tokenABI,
@@ -178,7 +178,7 @@ function EtherComponent() {
 
   //allow you to give a specific smart contract permission to use a certain amount of their tokens
   const handleApproveToken = async (
-    token: any,
+    token: Token,
     spenderAddress: string,
     amount: string
   ) => {
@@ -269,8 +269,8 @@ function EtherComponent() {
   };
 
   const handleSwapToken = async (
-    inputToken: any,
-    outputToken: any,
+    inputToken: Token,
+    outputToken: Token,
     receiverAddress: string,
     inputAmount: string
   ) => {
