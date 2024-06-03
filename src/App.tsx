@@ -1,12 +1,12 @@
 import "./App.css";
-import EtherComponent from "./components/base/ether";
-import Web3Component from "./components/base/web3";
+import EtherComponent from "./components/ether";
+import Web3Component from "./components/web3";
 
 function App() {
   return (
     <>
-      <Web3Component />
       <EtherComponent />
+      <Web3Component />
     </>
   );
 }
